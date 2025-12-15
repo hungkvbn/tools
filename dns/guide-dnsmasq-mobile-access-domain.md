@@ -15,7 +15,7 @@ Yêu cầu: đã cài Homebrew
 
 ```bash
 brew install dnsmasq
-
+```
 ---
 
 ## **2️⃣ Tạo file config cho domain**
@@ -24,7 +24,7 @@ Yêu cầu: đã cài Homebrew
 
 ```bash
 sudo nano /opt/homebrew/etc/dnsmasq.d/mobile-dev.conf
-
+```
 Nội dung:
 
 address=/mobile-dev.hungkvbn.vn/100.250.30.5
@@ -38,7 +38,7 @@ Mở file chính:
 
 ```bash
 sudo nano /opt/homebrew/etc/dnsmasq.conf
-
+```
 
 Đảm bảo có (hoặc thêm):
 
@@ -53,19 +53,19 @@ bind-interfaces
 ```bash
 sudo brew services restart dnsmasq
 Kiểm tra:
-
+```
 ```bash
 sudo lsof -i :53
-
+```
 ## **5️⃣ Test trên chính Mac**
 
 ```bash
 dig mobile-dev.hungkvbn.vn @100.123.24.2
 Kết quả mong muốn:
-
+```
 ```text
 mobile-dev.hungkvbn.vn.   0   IN   A   100.250.30.5
-
+```
 ## **6️⃣ Cấu hình DNS trên iPhone 📱**
 
 Settings → Wi-Fi
